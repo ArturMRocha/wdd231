@@ -1,0 +1,317 @@
+@media (min-width: 768px) {
+    /* Estilos Gerais */
+    body {
+        padding: 0;
+    }
+    
+    /* Header */
+    header {
+        padding: 3rem 2rem;
+    }
+    
+    .header-content {
+        gap: 2rem;
+        padding: 1.5rem 0;
+    }
+    
+    header img {
+        width: 130px;
+        height: 130px;
+        border-width: 4px;
+    }
+    
+    header h1 {
+        font-size: 2.8rem;
+    }
+    
+    /* Navegação */
+    nav ul {
+        padding: 0 2rem;
+    }
+    
+    nav a {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    /* Conteúdo Principal */
+    main {
+        padding: 3rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto 3rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Seção Course Work - NOVO LAYOUT */
+    .course-main-container {
+        display: flex;
+        gap: 2.5rem;
+        padding: 3rem;
+        margin: 3rem 0;
+    }
+    
+    /* Container ESQUERDO (Course Work) */
+    .course-left-container {
+        flex: 1;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        position: relative;
+    }
+    
+    .course-left-container h2 {
+        background-color: var(--accent-color);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 6px;
+        display: inline-block;
+        margin: -3.5rem auto 2rem auto;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        font-size: 1.6rem;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+    }
+    
+    .course-left-container ul {
+        margin-top: 1.5rem;
+    }
+    
+    .course-left-container li {
+        padding: 1rem 0;
+        font-size: 1.15rem;
+        position: relative;
+        padding-left: 2rem;
+    }
+    
+    .course-left-container li:before {
+        content: "•";
+        color: var(--accent-color);
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+    
+    /* Container DIREITO (Imagem e Texto) */
+    .course-right-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    /* Bloco de Imagem */
+    .course-image-block {
+        width: 100%;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    
+    .course-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s ease;
+    }
+    
+    .course-image:hover {
+        transform: scale(1.02);
+    }
+    
+    .image-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1.2rem;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        color: white;
+        text-align: center;
+    }
+    
+    .image-underline {
+        border-bottom: 3px solid var(--pending-color);
+        display: inline-block;
+        padding-bottom: 0.4rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+    
+    /* Bloco de Texto */
+    .course-text-block {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+    }
+    
+    .course-text-block:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: translateY(-5px);
+    }
+    
+    /* Seção Certificado */
+    .certificate-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+        margin-top: 2.5rem;
+    }
+    
+    .certificate-grid div {
+        padding: 1.3rem 0.8rem;
+    }
+    
+    .certificate-grid div:nth-child(1) {
+        padding: 1.8rem;
+        font-size: 1.3rem;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 3rem 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .copyright {
+        text-align: left;
+        flex: 1;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        flex: 1;
+        order: 2;
+    }
+    
+    .social-icons {
+        justify-content: flex-end;
+        flex: 1;
+        order: 3;
+    }
+    
+    .footer-links a {
+        padding: 0.5rem 1rem;
+    }
+    
+    .social-icons a {
+        font-size: 2rem;
+    }
+}
+
+/* Para telas muito grandes (opcional) */
+@media (min-width: 1200px) {
+    .header-content {
+        gap: 3rem;
+    }
+    
+    header img {
+        width: 140px;
+        height: 140px;
+    }
+    
+    header h1 {
+        font-size: 3rem;
+    }
+    
+    .course-main-container {
+        gap: 3rem;
+    }
+    
+    .course-left-container,
+    .course-right-container {
+        padding: 2.5rem;
+    }
+    
+    .course-image-block {
+        min-height: 350px;
+    }
+}
+/* Adicione estas regras ao seu large.css existente */
+
+@media (min-width: 768px) {
+    .course-work-container {
+        margin: 2rem 0;
+    }
+    
+    .course-work-title {
+        font-size: 1.8rem;
+    }
+    
+    .course-work-location {
+        font-size: 1.2rem;
+    }
+    
+    .course-work-list li {
+        font-size: 1.1rem;
+        padding-left: 1.5rem;
+    }
+    
+    .course-work-subtitle {
+        font-size: 1.4rem;
+    }
+}
+@media (min-width: 768px) {
+    /* Estilos gerais mantidos */
+    
+    /* Ajustes para a nova seção Course Work */
+    .course-work-section {
+        margin: 2rem 0;
+        padding: 1.5rem;
+    }
+    
+    .course-work-title {
+        font-size: 1.8rem;
+    }
+    
+    .course-work-location {
+        font-size: 1.2rem;
+    }
+    
+    .course-work-list li {
+        font-size: 1.1rem;
+        padding-left: 1.5rem;
+    }
+    
+    .course-work-subtitle {
+        font-size: 1.4rem;
+    }
+
+    /* Layout de duas colunas para desktop */
+    .course-main-container {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .course-left-column {
+        flex: 1;
+    }
+    
+    .course-right-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    
+}
