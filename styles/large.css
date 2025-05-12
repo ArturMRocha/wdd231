@@ -1,189 +1,116 @@
+
 @media (min-width: 768px) {
-    /* Estilos Gerais */
-    body {
-        padding: 0;
-    }
-    
-    /* Header */
     header {
         padding: 3rem 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
     }
-    
+
     .header-content {
-        gap: 2rem;
-        padding: 1.5rem 0;
+        flex-direction: row;
+        gap: 2.5rem;
     }
-    
+
     header img {
         width: 130px;
         height: 130px;
-        border-width: 4px;
     }
-    
+
     header h1 {
         font-size: 2.8rem;
+        text-align: left;
     }
-    
-    /* Navegação */
-    nav ul {
-        padding: 0 2rem;
-    }
-    
+
+    /* Navegação aprimorada */
     nav a {
         padding: 1rem;
         font-size: 1.1rem;
     }
-    
-    /* Conteúdo Principal */
+
+    /* Layout principal */
     main {
         padding: 3rem 2rem;
         max-width: 1200px;
-        margin: 0 auto 3rem;
+        margin: 0 auto;
     }
-    
+
     h1 {
         font-size: 2.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
     }
-    
-    /* Seção Course Work - NOVO LAYOUT */
+
+   
     .course-main-container {
-        display: flex;
-        gap: 2.5rem;
         padding: 3rem;
         margin: 3rem 0;
+        display: flex;
+        gap: 2rem;
     }
-    
-    /* Container ESQUERDO (Course Work) */
-    .course-left-container {
-        flex: 1;
-        background-color: rgba(255, 255, 255, 0.85);
-        border-radius: 12px;
-        padding: 2rem;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        position: relative;
-    }
-    
-    .course-left-container h2 {
-        background-color: var(--accent-color);
-        color: white;
-        padding: 1rem 2rem;
-        border-radius: 6px;
-        display: inline-block;
-        margin: -3.5rem auto 2rem auto;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        font-size: 1.6rem;
-        position: relative;
-        z-index: 2;
-        text-align: center;
-    }
-    
-    .course-left-container ul {
-        margin-top: 1.5rem;
-    }
-    
-    .course-left-container li {
-        padding: 1rem 0;
-        font-size: 1.15rem;
-        position: relative;
-        padding-left: 2rem;
-    }
-    
-    .course-left-container li:before {
-        content: "•";
-        color: var(--accent-color);
-        font-weight: bold;
-        position: absolute;
-        left: 0;
+
+    .course-main-container h2 {
         font-size: 1.8rem;
-        line-height: 1;
+        padding: 1rem 2.5rem;
+        margin: -4rem auto 2.5rem auto;
     }
-    
-    /* Container DIREITO (Imagem e Texto) */
-    .course-right-container {
+
+    .course-content {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+
+    .course-left-column {
+        flex: 1;
+    }
+
+    .course-right-column {
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 2rem;
     }
-    
-    /* Bloco de Imagem */
+
     .course-image-block {
-        width: 100%;
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        flex: 1.5;
+        max-width: 600px;
     }
-    
-    .course-image {
-        width: 100%;
-        height: auto;
-        display: block;
-        transition: transform 0.5s ease;
+
+    .course-text-block {
+        flex: 1;
+        padding: 2.5rem;
     }
-    
-    .course-image:hover {
-        transform: scale(1.02);
-    }
-    
-    .image-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 1.2rem;
-        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-        color: white;
-        text-align: center;
-    }
-    
-    .image-underline {
-        border-bottom: 3px solid var(--pending-color);
-        display: inline-block;
-        padding-bottom: 0.4rem;
-        font-weight: 600;
+
+    .course-text-block li {
         font-size: 1.2rem;
     }
-    
-    /* Bloco de Texto */
-    .course-text-block {
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.7);
-        border-radius: 10px;
-        padding: 2rem;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
+
+    .course-work-container {
+        margin: 2rem 0;
     }
-    
-    .course-text-block:hover {
-        background-color: rgba(255, 255, 255, 0.9);
-        transform: translateY(-5px);
+
+    .course-work-title {
+        font-size: 1.8rem;
     }
-    
-    /* Seção Certificado */
-    .certificate-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.2rem;
-        margin-top: 2.5rem;
+
+    .course-work-location {
+        font-size: 1.2rem;
     }
-    
-    .certificate-grid div {
-        padding: 1.3rem 0.8rem;
+
+    .course-work-list li {
+        font-size: 1.1rem;
+        padding-left: 1.5rem;
     }
-    
-    .certificate-grid div:nth-child(1) {
-        padding: 1.8rem;
-        font-size: 1.3rem;
+
+    .course-work-subtitle {
+        font-size: 1.4rem;
     }
-    
-    /* Footer */
+
+    /* Rodapé ajustado */
     footer {
         padding: 3rem 2rem;
     }
-    
+
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
@@ -191,127 +118,139 @@
         max-width: 1200px;
         margin: 0 auto;
     }
-    
+
     .copyright {
         text-align: left;
+        order: 1;
         flex: 1;
     }
-    
+
     .footer-links {
-        justify-content: center;
-        flex: 1;
         order: 2;
+        flex: 1;
+        justify-content: center;
     }
-    
+
     .social-icons {
-        justify-content: flex-end;
-        flex: 1;
         order: 3;
-    }
-    
-    .footer-links a {
-        padding: 0.5rem 1rem;
-    }
-    
-    .social-icons a {
-        font-size: 2rem;
-    }
-}
-
-/* Para telas muito grandes (opcional) */
-@media (min-width: 1200px) {
-    .header-content {
-        gap: 3rem;
-    }
-    
-    header img {
-        width: 140px;
-        height: 140px;
-    }
-    
-    header h1 {
-        font-size: 3rem;
-    }
-    
-    .course-main-container {
-        gap: 3rem;
-    }
-    
-    .course-left-container,
-    .course-right-container {
-        padding: 2.5rem;
-    }
-    
-    .course-image-block {
-        min-height: 350px;
-    }
-}
-/* Adicione estas regras ao seu large.css existente */
-
-@media (min-width: 768px) {
-    .course-work-container {
-        margin: 2rem 0;
-    }
-    
-    .course-work-title {
-        font-size: 1.8rem;
-    }
-    
-    .course-work-location {
-        font-size: 1.2rem;
-    }
-    
-    .course-work-list li {
-        font-size: 1.1rem;
-        padding-left: 1.5rem;
-    }
-    
-    .course-work-subtitle {
-        font-size: 1.4rem;
-    }
-}
-@media (min-width: 768px) {
-    /* Estilos gerais mantidos */
-    
-    /* Ajustes para a nova seção Course Work */
-    .course-work-section {
-        margin: 2rem 0;
-        padding: 1.5rem;
-    }
-    
-    .course-work-title {
-        font-size: 1.8rem;
-    }
-    
-    .course-work-location {
-        font-size: 1.2rem;
-    }
-    
-    .course-work-list li {
-        font-size: 1.1rem;
-        padding-left: 1.5rem;
-    }
-    
-    .course-work-subtitle {
-        font-size: 1.4rem;
-    }
-
-    /* Layout de duas colunas para desktop */
-    .course-main-container {
-        display: flex;
-        gap: 2rem;
-    }
-    
-    .course-left-column {
         flex: 1;
+        justify-content: flex-end;
     }
-    
-    .course-right-column {
-        flex: 1;
-        display: flex;
+}
+
+
+.course-work-container {
+    margin: 1.5rem 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.course-work-container:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.course-work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.course-work-title {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin: 0;
+}
+
+.course-work-location {
+    font-size: 1rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.course-work-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.course-work-list li {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 1.2rem;
+    line-height: 1.5;
+}
+
+.course-work-list li:before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.course-work-divider {
+    border: none;
+    height: 1px;
+    background-color: rgba(0,0,0,0.1);
+    margin: 1.2rem 0;
+}
+
+.course-work-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin: 0.8rem 0 0.5rem 0;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+}
+
+
+.course-work-container:focus-within {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+
+@media (max-width: 900px) and (min-width: 768px) {
+    .course-content {
         flex-direction: column;
-        gap: 2rem;
     }
     
-    
+    .course-image-block,
+    .course-text-block {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+.course-work-header {
+    transition: all 0.3s ease;
+}
+
+.course-work-container:hover .course-work-header {
+    transform: translateX(5px);
+}
+
+.course-work-list li {
+    transition: all 0.3s ease;
+}
+
+.course-work-container:hover .course-work-list li {
+    transform: translateX(3px);
 }

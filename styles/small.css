@@ -1,6 +1,3 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
-
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #34495e;
@@ -12,6 +9,8 @@
     --header-bg: #2c3e50;
     --footer-bg: #2c3e50;
     --glass-effect: rgba(255, 255, 255, 0.85);
+    --text-color: #333;
+    --text-light: #fff;
 }
 
 * {
@@ -23,17 +22,17 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: var(--primary-color);
+    color: var(--text-color);
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* HEADER - Proporção ajustada */
+/* Header Styles */
 header {
     background-color: var(--header-bg);
-    color: white;
+    color: var(--text-light);
     padding: 2.5rem 1rem;
     display: flex;
     flex-direction: column;
@@ -59,12 +58,12 @@ header img {
 header h1 {
     font-size: 2.4rem;
     margin: 0;
-    color: white;
+    color: var(--text-light);
     font-weight: 700;
     letter-spacing: 0.5px;
 }
 
-/* NAVIGATION */
+/* Navigation Styles */
 nav {
     background-color: var(--accent-color);
     padding: 0.6rem 0;
@@ -88,7 +87,8 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: var(--text-light);
+    background-color: var(--accent-color);
     padding: 0.9rem 0.5rem;
     display: block;
     transition: all 0.3s;
@@ -101,7 +101,23 @@ nav a:hover {
     background-color: rgba(255,255,255,0.2);
 }
 
-/* MAIN CONTENT */
+nav a.active {
+    background-color: rgba(0,0,0,0.3);
+    font-weight: bold;
+    position: relative;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--text-light);
+}
+
+/* Main Content Styles */
 main {
     padding: 2rem 1rem;
     flex: 1;
@@ -116,7 +132,7 @@ h1 {
     text-align: center;
 }
 
-/* COURSE WORK SECTION - Container transparente */
+/* Course Container Styles */
 .course-main-container {
     background-color: var(--glass-effect);
     border-radius: 12px;
@@ -125,13 +141,19 @@ h1 {
     backdrop-filter: blur(8px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.18);
+    color: var(--text-color);
+    transition: all 0.4s ease;
+}
+
+.course-main-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .course-main-container h2 {
     background-color: var(--accent-color);
-    color: white;
-    padding: rem 1.5rem;
-    border-radius: 5px;
+    color: var(--text-light);
+    padding: 1rem 1.5rem;
     display: inline-block;
     margin: -3.2rem auto 1.8rem auto;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -147,7 +169,26 @@ h1 {
     padding: 1.5rem 0;
 }
 
-/* Bloco de imagem (agora primeiro) */
+.course-content.loading {
+    position: relative;
+    min-height: 200px;
+}
+
+.course-content.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid var(--accent-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+/* Course Image Block */
 .course-image-block {
     order: 1;
     position: relative;
@@ -174,7 +215,7 @@ h1 {
     right: 0;
     padding: 1.2rem;
     background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    color: white;
+    color: var(--text-light);
     text-align: center;
 }
 
@@ -186,7 +227,7 @@ h1 {
     font-size: 1.2rem;
 }
 
-/* Bloco de texto (agora abaixo) */
+/* Course Text Block */
 .course-text-block {
     order: 2;
     background-color: rgba(255, 255, 255, 0.7);
@@ -194,6 +235,7 @@ h1 {
     padding: 2rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
+    color: var(--text-color);
 }
 
 .course-text-block:hover {
@@ -225,7 +267,7 @@ h1 {
     line-height: 1;
 }
 
-/* CERTIFICATE SECTION */
+/* Certificate Grid */
 .certificate-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -241,6 +283,7 @@ h1 {
     background-color: #f0f0f0;
     border: 1px solid #ddd;
     transition: all 0.3s ease;
+    color: var(--text-color);
 }
 
 .certificate-grid div:hover {
@@ -251,27 +294,94 @@ h1 {
 .certificate-grid div:nth-child(1) {
     grid-column: span 3;
     background-color: var(--accent-color);
-    color: white;
+    color: var(--text-light);
     font-size: 1.2rem;
     padding: 1.5rem;
 }
 
 .completed {
     background-color: var(--completed-color) !important;
-    color: white !important;
+    color: var(--text-light) !important;
     border-color: var(--completed-color) !important;
 }
 
 .pending {
     background-color: var(--pending-color) !important;
-    color: white !important;
+    color: var(--text-light) !important;
     border-color: var(--pending-color) !important;
 }
 
-/* FOOTER - Reorganizado */
+/* Filter Styles */
+.filter-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--accent-color);
+    background: transparent;
+    color: var(--accent-color);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--accent-color);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+.course-item.filtered {
+    opacity: 0.3;
+    transform: scale(0.98);
+    transition: all 0.4s;
+}
+
+.course-item.highlight {
+    animation: highlight 1.5s ease;
+}
+
+/* Credits Counter */
+.credits-counter {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent-color);
+    color: var(--text-light);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+.credits-counter:hover {
+    transform: scale(1.05);
+}
+
+.credits-counter span {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.credits-counter.warning {
+    background: var(--pending-color);
+    animation: pulse 2s infinite;
+}
+
+/* Footer Styles */
 footer {
     background-color: var(--footer-bg);
-    color: white;
+    color: var(--text-light);
     padding: 2.5rem 1rem;
     text-align: center;
     border-top: 4px solid var(--accent-color);
@@ -310,7 +420,7 @@ footer {
 }
 
 .footer-links a {
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
     transition: all 0.3s;
     font-size: 1.05rem;
@@ -330,7 +440,7 @@ footer {
 }
 
 .social-icons a {
-    color: white;
+    color: var(--text-light);
     font-size: 1.8rem;
     transition: transform 0.3s;
 }
@@ -339,211 +449,61 @@ footer {
     transform: translateY(-5px) scale(1.1);
 }
 
-/* MEDIA QUERIES */
-@media (min-width: 768px) {
-    header {
-        padding: 3rem 2rem;
+/* Accessibility Focus Styles */
+a:focus, button:focus {
+    outline: 3px solid var(--pending-color);
+    outline-offset: 3px;
+}
+
+/* Animations */
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes highlight {
+    0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(46, 204, 113, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0;
     }
     
-    header img {
-        width: 130px;
-        height: 130px;
+    nav li {
+        min-width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
     
-    header h1 {
-        font-size: 2.8rem;
+    .header-content {
+        flex-direction: column;
+        text-align: center;
     }
     
-    nav a {
-        padding: 1rem;
-        font-size: 1.1rem;
+    .certificate-grid {
+        grid-template-columns: 1fr;
     }
     
-    main {
-        padding: 3rem 2rem;
-    }
-    
-    h1 {
-        font-size: 2.5rem;
+    .certificate-grid div:nth-child(1) {
+        grid-column: span 1;
     }
     
     .course-main-container {
-        padding: 3rem;
-        margin: 3rem 0;
+        padding: 2rem 1rem;
     }
     
-    .course-main-container h2 {
-        font-size: 1.8rem;
-        padding: 1rem 2.5rem;
-        margin: -4rem auto 2.5rem auto;
-    }
-    
-    .course-content {
-        flex-direction:row-reverse;
-        align-items:flex-end;
-    }
-    
-    .course-image-block {
-        flex: 1.5;
-    }
-    
-    .course-text-block {
-        flex: 1;
-        padding: 2.5rem;
-    }
-    
-    .course-text-block li {
-        font-size: 1.2rem;
-    }
-    
-    footer {
-        padding: 3rem 2rem;
-    }
-    
-    .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .copyright {
-        text-align: left;
-    }
-    
-    .footer-links {
-        order: 2;
-    }
-    
-    .social-icons {
-        order: 3;
+    .credits-counter {
+        bottom: 10px;
+        right: 10px;
+        padding: 0.8rem 1.2rem;
     }
 }
-/* Adicione estas regras ao seu small.css existente */
-
-/* Course Work Section - Estilo da Imagem */
-.course-work-container {
-    margin: 1.5rem 0;
-    padding: 0;
-}
-
-.course-work-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.5rem;
-}
-
-.course-work-title {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    font-weight: 600;
-    margin: 0;
-}
-
-.course-work-location {
-    font-size: 1rem;
-    color: var(--accent-color);
-    font-weight: 500;
-}
-
-.course-work-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 0 1rem 0;
-}
-
-.course-work-list li {
-    padding: 0.3rem 0;
-    font-size: 1rem;
-    position: relative;
-    padding-left: 1.2rem;
-}
-
-.course-work-list li:before {
-    content: "-";
-    position: absolute;
-    left: 0;
-}
-
-.course-work-divider {
-    border: none;
-    height: 1px;
-    background-color: #ddd;
-    margin: 1rem 0;
-}
-
-.course-work-subtitle {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-    margin: 0.5rem 0;
-}
-/* Google Fonts e variáveis permanecem iguais */
-
-/* HEADER - Mantido igual */
-
-/* NAVIGATION - Mantido igual */
-
-/* MAIN CONTENT - Mantido igual */
-
-/* NOVA SEÇÃO COURSE WORK (ESTILO DA IMAGEM) */
-.course-work-section {
-    margin: 1.5rem 0;
-    padding: 1rem;
-    background-color: var(--card-color);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.course-work-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.8rem;
-}
-
-.course-work-title {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    font-weight: 600;
-}
-
-.course-work-location {
-    font-size: 1rem;
-    color: var(--accent-color);
-    font-weight: 500;
-}
-
-.course-work-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 0 1rem 0;
-}
-
-.course-work-list li {
-    padding: 0.3rem 0;
-    font-size: 1rem;
-    position: relative;
-    padding-left: 1.2rem;
-}
-
-.course-work-list li:before {
-    content: "-";
-    position: absolute;
-    left: 0;
-}
-
-.course-work-divider {
-    border: none;
-    height: 1px;
-    background-color: #ddd;
-    margin: 1rem 0;
-}
-
-.course-work-subtitle {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-    margin: 0.5rem 0;
-}
-
