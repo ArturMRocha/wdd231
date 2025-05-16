@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Floricultura Beija-Flor",
+      "address": "Rua dos Cravos, 321 - Holambra, SP",
+      "phone": "(19) 3802-1122",
+      "website": "https://beijaflorflores.com.br",
+      "image": "beijaflor.png",
+      "membershipLevel": 3,
+      "description": "Especializada em flores ornamentais e arranjos personalizados."
+    },
+    {
+      "name": "Café Holandês",
+      "address": "Av. das Tulipas, 45 - Holambra, SP",
+      "phone": "(19) 3802-3456",
+      "website": "https://cafeholandes.com.br",
+      "image": "cafeholandes.png",
+      "membershipLevel": 2,
+      "description": "Cafeteria tradicional com grãos locais e tortas artesanais."
+    },
+    {
+      "name": "Hotel das Flores",
+      "address": "Rod. SP-107, Km 30 - Holambra, SP",
+      "phone": "(19) 3802-9988",
+      "website": "https://hoteldasflores.com.br",
+      "image": "hoteldasflores.png",
+      "membershipLevel": 1,
+      "description": "Hospedagem charmosa com vista para campos de flores."
+    },
+    {
+      "name": "AgroHolambra",
+      "address": "Estrada Municipal HBR-020, Holambra, SP",
+      "phone": "(19) 3802-6677",
+      "website": "https://agroholambra.com.br",
+      "image": "agroholambra.png",
+      "membershipLevel": 3,
+      "description": "Cooperativa agrícola líder em produção de flores e plantas."
+    },
+    {
+      "name": "Restaurante Tulipa",
+      "address": "Rua das Dálias, 80 - Holambra, SP",
+      "phone": "(19) 3802-7766",
+      "website": "https://restauranteTulipa.com.br",
+      "image": "tulipa.png",
+      "membershipLevel": 2,
+      "description": "Gastronomia holandesa com toques brasileiros."
+    },
+    {
+      "name": "Artesanato da Terra",
+      "address": "Praça dos Imigrantes, 10 - Holambra, SP",
+      "phone": "(19) 3802-8899",
+      "website": "https://artesanatodaterra.com.br",
+      "image": "artesanato.png",
+      "membershipLevel": 1,
+      "description": "Loja de artesanatos locais e lembranças regionais."
+    },
+    {
+      "name": "Eventos Holambra",
+      "address": "Alameda dos Jacarandás, 55 - Holambra, SP",
+      "phone": "(19) 3802-5599",
+      "website": "https://eventosholambra.com.br",
+      "image": "eventos.png",
+      "membershipLevel": 2,
+      "description": "Organização de feiras, casamentos e eventos corporativos."
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  .info-panels {
+    flex-direction: column;
+  }
+
+  .directory-cards {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
+.footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+
+.directory-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.directory-cards.grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.directory-cards.list {
+  display: block;
+}
+
+.directory-cards.list .card {
+  margin-bottom: 1rem;
+}
+/* Centralizar e estilizar os botões de troca de visualização */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.view-toggle button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-toggle button:hover {
+  background-color: #555;
+}
+
+/* Cards Container */
+.directory-cards {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Grid View com 3 colunas fixas */
+.directory-cards.grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* List View também com 3 colunas agrupadas, mas com aparência de lista */
+.directory-cards.list {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Card básico */
+.directory-cards .card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* Estilo base para cada card */
+.directory-cards .card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.directory-cards .card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+/* LIST MODE – estilo tipo tabela */
+.directory-cards.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+/* Cada card será uma linha estilo "linha de tabela" */
+.directory-cards.list .card {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr 2fr; /* Nome, endereço, telefone, URL */
+  align-items: center;
+  gap: 1rem;
+  background-color: #f0f8ff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.95rem;
+  box-shadow: none;
+}
+
+.directory-cards.list .card img {
+  display: none; /* Oculta a imagem no modo list */
+}
+
+.directory-cards.list .card p,
+.directory-cards.list .card a {
+  margin: 0;
+}
+
+.directory-cards.list .card strong {
+  font-weight: bold;
+}
+/*hamburguer e menu */
+
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Navbar geral */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ddd;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+  max-height: 50px;
+}
+
+/* Menu de navegação */
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Botão hamburguer */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* RESPONSIVO: Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Oculto por padrão no mobile */
+    margin-top: 1rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 0.5rem 0;
+    border-top: 1px solid #ccc;
+  }
+}
+
+/* RESPONSIVO: Desktop */
+@media (min-width: 769px) {
+  .nav-menu {
+    display: flex !important;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}

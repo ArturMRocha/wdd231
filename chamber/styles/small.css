@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: 100px;
+  display:block;
+}
+
+
+  header {
+  background-color: #ddd;
+  padding: 0.5rem 1rem;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-height: 50px;
+}
+
+#menu-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  display: none;
+}
+
+#main-nav ul {
+  list-style: none;
+  display:flex;
+  gap: 2rem;
+  padding-left: 520px;
+  vertical-align: middle;
+  text-align:end;
+  line-height: 3px;
+}
+
+#main-nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+#toggle-theme {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cta-button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: #ccc;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Main Content */
+main {
+  padding: 1rem;
+}
+
+.info-panels {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  flex: 1;
+  min-width: 280px;
+  flex-grow: 1;
+}
+
+.panel h2 {
+  background: #333;
+  color: #fff;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.weather-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.directory-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  flex: 1 1 calc(33% - 1rem);
+  min-width: 280px;
+}
+
+.card img {
+  max-height: 100px;
+  object-fit: cover;
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #e0e0e0;
+  padding: 2rem 0;
+}
+
+.footer-container {
+  max-width: 1200px;       /* Limita a largura para manter margens */
+  margin: 0 auto;          /* Centraliza o conteúdo */
+  padding: 0 1rem;         /* Margens internas laterais */
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.directory-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.directory-cards.grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.directory-cards.list {
+  display: block;
+}
+
+.directory-cards.list .card {
+  margin-bottom: 1rem;
+}
+
+/* Centralizar e estilizar os botões de troca de visualização */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.view-toggle button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-toggle button:hover {
+  background-color: #555;
+}
+
+/* Cards Container */
+.directory-cards {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Grid View com 3 colunas fixas */
+.directory-cards.grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* List View também com 3 colunas agrupadas, mas com aparência de lista */
+.directory-cards.list {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Card básico */
+.directory-cards .card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* Estilo base para cada card */
+.directory-cards .card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.directory-cards .card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+/* LIST MODE – estilo tipo tabela */
+.directory-cards.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+/* Cada card será uma linha estilo "linha de tabela" */
+.directory-cards.list .card {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr 2fr; /* Nome, endereço, telefone, URL */
+  align-items: center;
+  gap: 1rem;
+  background-color: #f0f8ff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.95rem;
+  box-shadow: none;
+}
+
+.directory-cards.list .card img {
+  display: none; /* Oculta a imagem no modo list */
+}
+
+.directory-cards.list .card p,
+.directory-cards.list .card a {
+  margin: 0;
+}
+
+.directory-cards.list .card strong {
+  font-weight: bold;
+}
+
+/*hamburguer e menu*/
+
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Navbar geral */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ddd;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+  max-height: 50px;
+}
+
+/* Menu de navegação */
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Botão hamburguer */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* RESPONSIVO: Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Oculto por padrão no mobile */
+    margin-top: 1rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 0.5rem 0;
+    border-top: 1px solid #ccc;
+  }
+}
+
+/* RESPONSIVO: Desktop */
+@media (min-width: 769px) {
+  .nav-menu {
+    display: flex !important;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+.menu-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* Esconde por padrão */
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+  }
+}
+.hidden {
+  display: none;
+}
+
+
+

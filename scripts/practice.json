@@ -1,0 +1,39 @@
+{
+  "family_name": "ROCHA",
+  "move_in_date": "2005-06-10",
+  "number_of_people": 6,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Ricardo Rocha",
+      "gender": "Male",
+      "birthdate": "1990-05-15"
+    },
+    {
+      "name": "Erica Rocha ",
+      "gender": "Female",
+      "birthdate": "1992-08-20"
+    },
+    {
+      "name": "Lorena Rocha",
+      "gender": "Female",
+      "birthdate": "2010-03-05"
+    },
+    {
+      "name": "Arthur Rocha",
+      "gender": "Male",
+      "birthdate": "2002-04-17"
+    },
+    {   
+        "name": "Gustavo Rocha",
+        "gender":"Male",
+        "birthdate": "2006-06-04"
+
+    },
+    {
+        "name": "Milena Rocha",
+        "gender":"Female",
+        "birthdate":"2022-07-7"
+    }
+  ]
+}
