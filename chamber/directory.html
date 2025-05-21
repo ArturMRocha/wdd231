@@ -3,134 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="title" content="Câmara de Comércio - Home Page">
-  <meta name="description" content="Home or landing page for Chamber">
+  <meta name="title" content="Câmara de Comércio de Holambra">
+  <meta name="description" content="A Câmara de Comércio de Holambra apoia o crescimento econômico local, promove networking e oferece recursos para empresários e a comunidade.">
   <meta name="author" content="Arthur de Menezes Rocha">
-  <link rel="stylesheet" href="styles/homepage.css">
-  <script src="scripts/homepage.js" defer></script>
+  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <script src="scripts/directory.js" defer></script>
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Meta Tags Facebook (Open Graph) -->
+  <meta property="og:title" content="Câmara de Comércio de Holambra">
+  <meta property="og:description" content="Promovendo o crescimento econômico e conectando negócios em Holambra, SP.">
+  <meta property="og:image" content="img/og-image.jpg">
+  <meta property="og:url" content="...">
+
+  <title>Holambra Chamber of Commerce</title>
+
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <div class="logo">
-            <img src="logo-camara.png" alt="Logo da Câmara de Comércio">
-            <div class="logo-text">
-                <h1>Câmara de Comércio</h1>
-                <p>Promovendo o crescimento empresarial desde 1985</p>
-            </div>
-        </div>
-        <div class="social-media">
-            <!-- Ícones de redes sociais -->
-            <a href="#"><img src="facebook-icon.png" alt="Facebook" width="30"></a>
-            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" width="30"></a>
-        </div>
-    </header>
+  
+<header>
+  <div class="top-bar">
+    <img src="images/logoholambra.png" alt="Logo Holambra Chamber of Commerce" class="logo">
     
-    <!-- Navegação -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="descubra.html">Descubra</a></li>
-            <li><a href="diretorio.html">Diretório</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="associe-se.html">Associe-se</a></li>
-        </ul>
+  <button id="menu-toggle" aria-label="Abrir menu" class="menu-toggle">☰</button>
+
+
+    <!-- Menu de navegação -->
+    <nav class="nav-menu hidden" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
     </nav>
-    
-    <!-- Hero Section Responsiva -->
-    <section class="hero">
-        <picture>
-            <source media="(max-width: 600px)" srcset="hero-small.jpg">
-            <source media="(max-width: 1200px)" srcset="hero-medium.jpg">
-            <img class="hero-image" src="hero-large.jpg" alt="Centro empresarial da cidade">
-        </picture>
-        <div class="hero-content">
-            <h2>Impulsionando o Crescimento Empresarial em Nossa Região</h2>
-            <p>Junte-se à nossa comunidade de negócios e aproveite os benefícios de fazer parte da Câmara de Comércio mais atuante do estado.</p>
-            <a href="associe-se.html" class="cta-button">Associe-se Agora</a>
-        </div>
+  
+  </div>
+
+    <div class="hero">
+      <img src="images/holambracidadeflores.jpg" alt="Holambra Landscape" class="hero-image" >
+      <button class="cta-button">Keynote Tickets</button>
+    </div>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="info-panels">
+      <div class="panel events">
+        <h2>Events</h2>
+        <div class="content-placeholder"></div>
+      </div>
+      <div class="panel weather">
+  <h2>Current Weather</h2>
+  <div class="weather-info">
+    <img src="images/weathericon.svg" alt="Clima atual" class="weather-icon">
+    <div class="weather-text">
+      <p><strong>75°F</strong></p>
+      <p>Partly Cloudy<br>
+        High: 85°<br>
+        Low: 52°<br>
+        Humidity: 34%<br>
+        Sunrise: 7:30am<br>
+        Sunset: 9:59pm
+      </p>
+    </div>
+  </div>
+</div>
+      <div class="panel forecast">
+        <h2>Weather Forecast</h2>
+        <p>Today: <strong>90°F</strong></p>
+        <p>Wednesday: <strong>89°F</strong></p>
+        <p>Thursday: <strong>68°F</strong></p>
+      </div>
     </section>
-    
-    <!-- Conteúdo Principal -->
-    <div class="container">
-        <main>
-            <!-- Eventos Atuais -->
-            <section class="current-events">
-                <h2>Eventos Atuais</h2>
-                
-                <div class="event">
-                    <h3>Feira de Negócios Anual</h3>
-                    <p class="event-date">15 de Junho, 2023 | 09:00 - 18:00</p>
-                    <p>Participe da maior feira de negócios da região com mais de 100 expositores e oportunidades de networking.</p>
-                    <a href="#">Saiba mais →</a>
-                </div>
-                
-                <div class="event">
-                    <h3>Workshop: Marketing Digital para Pequenas Empresas</h3>
-                    <p class="event-date">22 de Junho, 2023 | 14:00 - 17:00</p>
-                    <p>Aprenda estratégias eficazes de marketing digital com especialistas do setor.</p>
-                    <a href="#">Saiba mais →</a>
-                </div>
-            </section>
-        </main>
-        
-        <aside>
-            <!-- Clima via API -->
-            <section class="weather">
-                <h2>Previsão do Tempo</h2>
-                <div class="weather-card">
-                    <div class="current-weather">
-                        <div class="weather-icon" id="weather-icon">⏳</div>
-                        <div class="temp" id="current-temp">--°C</div>
-                        <p id="weather-desc">Carregando...</p>
-                    </div>
-                    <div class="forecast" id="forecast">
-                        <!-- Previsão para 3 dias será inserida aqui via JavaScript -->
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Destaques de Membros (dinâmicos) -->
-            <section class="spotlights">
-                <h2>Destaques Empresariais</h2>
-                <div id="member-spotlights">
-                    <!-- Membros serão inseridos aqui via JavaScript -->
-                </div>
-            </section>
-        </aside>
+    <div class="view-toggle">
+    <button id="gridView">Grid View</button>
+    <button id="listView">List View</button>
     </div>
     
-    <!-- Rodapé -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contato</h3>
-                <p>Rua Comercial, 123 - Centro</p>
-                <p>CEP: 12345-678</p>
-                <p>Telefone: (11) 1234-5678</p>
-                <p>Email: contato@camaradecomercio.com.br</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Horário de Funcionamento</h3>
-                <p>Segunda a Sexta: 8:00 - 18:00</p>
-                <p>Sábado: 9:00 - 12:00</p>
-                <p>Domingo: Fechado</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Links Rápidos</h3>
-                <p><a href="#">Associe-se</a></p>
-                <p><a href="#">Eventos</a></p>
-                <p><a href="#">Recursos</a></p>
-                <p><a href="#">Contato</a></p>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            <p>&copy; <span id="current-year"></span> Câmara de Comércio. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    
+    <section class="directory-cards grid" id="directoryView">
+    
+    <div class="card">
+  <img src="images/beijaflor.jpg" alt="Logo da Floricultura Beija-Flor" class="logo">
+  <strong>Floricultura Beija-Flor</strong>
+  <p>Rua das Rosas, 123, Holambra</p>
+  <p>(19) 3802-1122</p>
+  <a href="https://beijaflorflores.com.br">https://beijaflorflores.com.br</a>
+</div>
+
+<div class="card">
+  <img src="images/cafeholandes.png" alt="Logo do Café Holandês" class="logo">
+  <strong>Café Holandês</strong>
+  <p>Rua dos Moinhos, 456, Holambra</p>
+  <p>(19) 3802-3456</p>
+  <a href="https://cafeholandes.com.br">https://cafeholandes.com.br</a>
+</div>
+
+<div class="card">
+  <img src="images/hotellogo.png" alt="Logo do Hotel das Flores" class="logo">
+  <strong>Hotel das Flores</strong>
+  <p>Av. das Dálias, 789, Holambra</p>
+  <p>(19) 3802-9988</p>
+  <a href="https://hoteldasflores.com.br">https://hoteldasflores.com.br</a>
+</div>
+
+<div class="card">
+  <img src="images/agroholambra.png" alt="Logo da AgroHolambra" class="logo">
+  <strong>AgroHolambra</strong>
+  <p>Rodovia SP-107, Km 33, Holambra</p>
+  <p>(19) 3802-6677</p>
+  <a href="https://agroholambra.com.br">https://agroholambra.com.br</a>
+</div>
+
+<div class="card">
+  <img src="images/tuliparestaurante.png" alt="Logo do Restaurante Tulipa" class="logo">
+  <strong>Restaurante Tulipa</strong>
+  <p>Rua das Tulipas, 321, Holambra</p>
+  <p>(19) 3802-7766</p>
+  <a href="https://restauranteTulipa.com.br">https://restauranteTulipa.com.br</a>
+</div>
+
+<div class="card">
+  <img src="images/daterra.png" alt="Logo do Artesanato da Terra" class="logo">
+  <strong>Artesanato da Terra</strong>
+  <p>Praça Central, Holambra</p>
+  <p>(19) 3802-8899</p>
+  <a href="https://artesanatodaterra.com.br">https://artesanatodaterra.com.br</a>
+</div>
+
+<div class="card">
+  <img src="images/eventosholambra.png" alt="Logo do Eventos Holambra" class="logo">
+  <strong>Eventos Holambra</strong>
+  <p>Av. das Festas, 555, Holambra</p>
+  <p>(19) 3802-5599</p>
+  <a href="https://eventosholambra.com.br">https://eventosholambra.com.br</a>
+</div>
+
+</section>
   
+</main>
+
+  <footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <p><strong>Chamber of Commerce Holambra</strong><br>
+      Rua das Flores, 100<br>
+      Holambra, SP 13825-000<br>
+      <a href="mailto:Commerce@holambracc.com.br">info@holambracc.com.br</a><br>
+      (19) 8855-3334</p>
+    </div>
+
+    <div class="footer-center">
+      <a href="#"><img src="images/icons8youtube.svg" alt="YouTube" class="social-icon"></a>
+      <a href="#"><img src="images/icons8twitter.svg" alt="Twitter/X" class="social-icon"></a>
+      <a href="#"><img src="images/icons8linkedin.svg" alt="LinkedIn" class="social-icon"></a>
+    </div>
+
+    <div class="footer-right">
+    <p>
+      WDD231 Projeto de Classe<br>
+      Arthur De Menezes Rocha<br>
+      &copy; <span id="currentYear"></span> Holambra Chamber of Commerce<br>
+      Última modificação: <span id="lastModified"></span>
+    </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
