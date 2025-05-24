@@ -1,0 +1,31 @@
+{
+    "members": [
+        {
+            "name": "Flores Holambra",
+            "description": "Maior produtor de flores da região",
+            "address": "Rua das Tulipas, 100",
+            "phone": "(19) 3802-1000",
+            "website": "https://floresholambra.com.br",
+            "logo": "images/Flowerslogo.jpg",
+            "membership": "gold"
+        },
+        {
+            "name": "Café Holandês",
+            "description": "Cafeteria tradicional com doces caseiros",
+            "address": "Avenida dos Moinhos, 250",
+            "phone": "(19) 3802-2000",
+            "website": "https://cafeholandes.com.br",
+            "logo": "images/cafeholandes.png",
+            "membership": "silver"
+        },
+        {
+            "name": "Queijaria De Vol",
+            "description": "Produtos lácteos artesanais",
+            "address": "Estrada dos Laticínios, 75",
+            "phone": "(19) 3802-3000",
+            "website": "https://queijariadevol.com.br",
+            "logo": "images/queijariadevol.jpg",
+            "membership": "gold"
+        }
+    ]
+}
