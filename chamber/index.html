@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/homepage.css">
+    <script src="scripts/homepage.js" defer></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <title>Chamber Of Commerce - homepage</title>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logoholambra.png" alt="Chamber of Commerce Logo">
+            <div class="logo-text">
+                <h1>Holambra Chamber of Commerce</h1>
+                <p>Supporting local businesses since 1985</p>
+            </div>
+        </div>
+        <div class="social-media">
+            <!-- Social media icons -->
+            <a href="#"><img src="images/icons8youtube.svg" alt="YouTube" width="30"></a>
+            <a href="#"><img src="images/icons8linkedin.svg" alt="LinkedIn" width="30"></a>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="https://arturmrocha.github.io/wdd231/chamber/directory.html">Directory</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Responsive Hero Section -->
+    <section class="hero">
+        <picture>
+            <source media="(max-width: 600px)" srcset="images/downtownholambra.jpg">
+            <source media="(max-width: 1200px)" srcset="images/downtownholambra.jpg">
+            <img class="hero-image" src="images/downtownholambra.jpg" alt="Holambra downtown business district">
+        </picture>
+        <div class="hero-content">
+            <h2>Driving Business Growth in Our Community</h2>
+            <p>Join our network of local businesses and experience the benefits of being part of the most active Chamber of Commerce in the region.</p>
+            <a href="join.html" class="cta-button">Join Now</a>
+        </div>
+    </section>
+    
+     <!-- Main Content -->
+    <div class="container">
+        <main>
+            <!-- Current Events -->
+            <section class="current-events">
+                <h2>Upcoming Events</h2>
+                
+                <div class="event">
+                    <h3>Annual Business Expo</h3>
+                    <p class="event-date">June 15, 2023 | 9:00 AM - 6:00 PM</p>
+                    <p>Join us for the region's largest business expo featuring over 100 exhibitors and networking opportunities.</p>
+                    <a href="#">Learn more →</a>
+                </div>
+                
+                <div class="event">
+                    <h3>Workshop: Digital Marketing for Small Businesses</h3>
+                    <p class="event-date">June 22, 2023 | 2:00 PM - 5:00 PM</p>
+                    <p>Learn effective digital marketing strategies from industry experts.</p>
+                    <a href="#">Learn more →</a>
+                </div>
+            </section>
+        </main>
+        
+        <aside>
+            <!-- Weather -->
+            <section class="weather">
+                <h2>Weather Forecast</h2>
+                <div class="weather-card">
+                    <div class="current-weather">
+                        <div class="weather-icon" id="weather-icon">⏳</div>
+                        <div class="temp" id="current-temp">--°F</div>
+                        <p id="weather-desc">Loading...</p>
+                        <p id="location">Holambra</p>
+                    </div>
+                    <div class="forecast" id="forecast">
+                        <!-- 3-day forecast will be inserted here via JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </aside>    
+          <div class="container"></div>
+    <section class="business-spotlights">
+        <h2>Destaques Comerciais</h2>
+        <div id="member-spotlights" class="spotlights-grid">
+            <!-- Os cards serão inseridos aqui via JavaScript -->
+        </div>
+    </section>
+</div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Commerce Street, Suite 100</p>
+                <p>Holambra, ST 12345</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: info@holambrachamber.org</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Office Hours</h3>
+                <p>Monday-Friday: 8:00 AM - 5:00 PM</p>
+                <p>Saturday: 9:00 AM - 12:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="#">Join the Chamber</a></p>
+                <p><a href="#">Upcoming Events</a></p>
+                <p><a href="#">Business Resources</a></p>
+                <p><a href="#">Contact Us</a></p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; <span id="current-year"></span> Holambra Chamber of Commerce. All rights reserved.</p>
+        </div>
+    </footer>
