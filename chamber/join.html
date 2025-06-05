@@ -3,173 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Chamber of Commerce of Holambra</title>
+    <meta name="description" content="Join the Chamber of Commerce of Holambra and access exclusive benefits for your business">
     <link rel="stylesheet" href="styles/join.css">
     <script src="scripts/join.js" defer></script>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <title>Join the Chamber of Commerce of Holambra</title>
-    </head>
+    <link rel="icon" href="favicon.ico">
+</head>
 <body>
+    <!-- Header Consistent with Other Pages -->
     <header>
-        <h1>Chamber of Commerce of Holambra</h1>
-        <p>Join our community of businesses and organizations</p>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="images/logoholambra.png" alt="Holambra Chamber Logo" class="logo" width="100" height="100">
+            </a>
+            <div class="header-text">
+                <h1>Chamber of Commerce of Holambra</h1>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="images/icons8youtube.svg" alt="YouTube" width="30" height="30"></a>
+                <a href="#"><img src="images/icons8linkedin.svg" alt="LinkedIn" width="30" height="30"></a>
+            </div>
+            <button id="menu-toggle" aria-label="Menu">☰</button>
+        </div>
+        <nav>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discovery.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+            </ul>
+        </nav>
+        <div class="date-banner">
+            <span id="current-date"></span>
+        </div>
     </header>
-    
-    <div class="container">
-        <div class="form-container">
-            <h2>Membership Application</h2>
-            <form method="get" action="thankyou.html">
-                <label for="first-name">
-                    First Name
-                    <input type="text" id="first-name" name="first-name" title="Please enter your first name" autocomplete="given-name" required>
-                </label>
-                
-                <label for="last-name">
-                    Last Name
-                    <input type="text" id="last-name" name="last-name" title="Please enter your last name" autocomplete="family-name" required>
-                </label>
-                
-                <label for="title">
-                    Organizational Title
-                    <input type="text" id="title" name="title" title="Please enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}">
-                </label>
-                
-                <label for="email">
-                    Email Address
-                    <input type="email" id="email" name="email" title="Please enter your email address" autocomplete="email" placeholder="example@domain.com" required>
-                </label>
-                
-                <label for="phone">
-                    Mobile Phone Number
-                    <input type="tel" id="phone" name="phone" title="Please enter your mobile phone number" autocomplete="tel" required>
-                </label>
-                
-                <label for="organization">
-                    Business/Organization Name
-                    <input type="text" id="organization" name="organization" title="Please enter your business or organization name" autocomplete="organization" required>
-                </label>
-                
-                <label for="membership">
-                    Membership Level
-                    <select id="membership" name="membership" title="Please select a membership level" required>
-                        <option value="">-- Select a Level --</option>
-                        <option value="np">NP Membership (Non-Profit)</option>
-                        <option value="bronze">Bronze Membership</option>
-                        <option value="silver">Silver Membership</option>
-                        <option value="gold">Gold Membership</option>
-                    </select>
-                </label>
-                
-                <label for="description">
-                    Business/Organization Description
-                    <textarea id="description" name="description" title="Please describe your business or organization" rows="4"></textarea>
-                </label>
-                
-                <input type="hidden" id="timestamp" name="timestamp">
-                
-                <button type="submit">Submit Application</button>
-            </form>
-        </div>
+
+    <!-- Main Content -->
+    <main class="join-container">
+        <h2>Membership Application</h2>
         
-        <div class="membership-cards">
-            <div class="card">
-                <h3>NP Membership</h3>
-                <p>For non-profit organizations with no fee</p>
-                <a href="#np-modal" class="modal-link">Learn about benefits</a>
-            </div>
-            
-            <div class="card">
-                <h3>Bronze Membership</h3>
-                <p>Basic level with essential benefits</p>
-                <a href="#bronze-modal" class="modal-link">Learn about benefits</a>
-            </div>
-            
-            <div class="card">
-                <h3>Silver Membership</h3>
-                <p>Enhanced benefits for growing businesses</p>
-                <a href="#silver-modal" class="modal-link">Learn about benefits</a>
-            </div>
-            
-            <div class="card">
-                <h3>Gold Membership</h3>
-                <p>Premium benefits for established businesses</p>
-                <a href="#gold-modal" class="modal-link">Learn about benefits</a>
-            </div>
+        <div class="join-grid">
+            <form method="get" action="thankyou.html" class="join-form">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="first-name">
+                        First Name*
+                        <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
+                    </label>
+                    
+                    <label for="last-name">
+                        Last Name*
+                        <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
+                    </label>
+                    
+                    <label for="title">
+                        Title/Position
+                        <input type="text" id="title" name="title" pattern="[A-Za-z\- ]{7,}" autocomplete="organization-title">
+                    </label>
+                    
+                    <label for="email">
+                        Email*
+                        <input type="email" id="email" name="email" required placeholder="yourname@example.com" autocomplete="email">
+                    </label>
+                    
+                    <label for="phone">
+                        Phone*
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Business Information</legend>
+                    <label for="organization">
+                        Business Name*
+                        <input type="text" id="organization" name="organization" required autocomplete="organization">
+                    </label>
+                    
+                    <label for="membership">
+                        Membership Level*
+                        <select id="membership" name="membership" required>
+                            <option value="">Select a Level...</option>
+                            <option value="np">NP Membership (Non-Profit)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+                    
+                    <label for="description">
+                        Business Description
+                        <textarea id="description" name="description" rows="4"></textarea>
+                    </label>
+                </fieldset>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+
+            <aside class="membership-benefits">
+                <h3>Membership Benefits</h3>
+                <div class="benefit-card">
+                    <h4>NP Membership</h4>
+                    <p class="price">Free</p>
+                    <ul>
+                        <li>Directory Listing</li>
+                        <li>Basic Resources</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>Bronze</h4>
+                    <p class="price">R$500/year</p>
+                    <ul>
+                        <li>All NP Benefits</li>
+                        <li>Training Workshops</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>Silver</h4>
+                    <p class="price">R$1,200/year</p>
+                    <ul>
+                        <li>All Bronze Benefits</li>
+                        <li>Featured Listing</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>Gold</h4>
+                    <p class="price">R$2,500/year</p>
+                    <ul>
+                        <li>All Silver Benefits</li>
+                        <li>Premium Advertising</li>
+                    </ul>
+                </div>
+            </aside>
         </div>
-    </div>
-    
-    <!-- Modal Dialogs -->
-    <div id="np-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>NP Membership Benefits</h3>
-            <p>For non-profit organizations (no fee)</p>
-            <ul>
-                <li>Listing in our non-profit directory</li>
-                <li>Access to member-only resources</li>
-                <li>Monthly newsletter</li>
-                <li>Invitation to annual non-profit summit</li>
-                <li>10% discount on chamber events</li>
-                <li>Social media shout-outs</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div id="bronze-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Bronze Membership Benefits</h3>
-            <p>Annual fee: R$500</p>
-            <ul>
-                <li>All NP Membership benefits</li>
-                <li>Business listing in our online directory</li>
-                <li>Quarterly business training workshops</li>
-                <li>15% discount on chamber events</li>
-                <li>Access to member-only networking events</li>
-                <li>Monthly business spotlight opportunity</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div id="silver-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Silver Membership Benefits</h3>
-            <p>Annual fee: R$1,200</p>
-            <ul>
-                <li>All Bronze Membership benefits</li>
-                <li>Featured listing in our online directory</li>
-                <li>Monthly business training workshops</li>
-                <li>25% discount on chamber events</li>
-                <li>Priority access to networking events</li>
-                <li>Bi-weekly business spotlight opportunity</li>
-                <li>Free admission to two annual luncheons</li>
-                <li>Social media feature once per quarter</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div id="gold-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Gold Membership Benefits</h3>
-            <p>Annual fee: R$2,500</p>
-            <ul>
-                <li>All Silver Membership benefits</li>
-                <li>Premium featured listing in our directory</li>
-                <li>Weekly advanced business training</li>
-                <li>50% discount on chamber events</li>
-                <li>VIP access to all networking events</li>
-                <li>Weekly business spotlight opportunity</li>
-                <li>Free admission to all annual luncheons</li>
-                <li>Monthly social media features</li>
-                <li>Homepage banner advertisement (rotating)</li>
-                <li>Event sponsorship opportunities</li>
-                <li>Dedicated business consultant</li>
-            </ul>
-        </div>
-    </div>
-    
+    </main>
+
+    <!-- Footer Consistent with Other Pages -->
     <footer>
-        <p>&copy; 2023 Chamber of Commerce of Holambra. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logoholambra.png" alt="Holambra Chamber Logo" width="120" height="120">
+                <p>Chamber of Commerce of Holambra</p>
+            </div>
+            <div class="contact-info">
+                <address>
+                    Rua das Flores, 123<br>
+                    Holambra, SP 13825-000<br>
+                    Brazil
+                </address>
+                <p>info@holambrachamber.com</p>
+                <p>+55 (19) 3802-8000</p>
+            </div>
+            <div class="additional-info">
+                <p>&copy; <span id="current-year"></span> Chamber of Commerce of Holambra</p>
+                <p>Arthur M. Rocha</p>
+                <p>WDD 230 Project</p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
     </footer>
+</body>
+</html>
