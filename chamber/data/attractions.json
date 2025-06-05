@@ -1,0 +1,52 @@
+{
+    "attractions": [
+        {
+            "name": "Holambra Flower Park",
+            "address": "Alameda Maurício de Nassau, 1240",
+            "description": "Beautiful park showcasing millions of flowers with Dutch-inspired gardens and architecture.",
+            "image": "Flowerholambra.webp"
+        },
+        {
+            "name": "Moinho Povos Unidos",
+            "address": "Rua dos Imigrantes, 1000",
+            "description": "A replica of traditional Dutch windmills, symbolizing the Dutch heritage of Holambra.",
+            "image": "moinho.webp"
+        },
+        {
+            "name": "Holambra Expoflora",
+            "address": "Avenida das Tulipas, 500",
+            "description": "Annual flower festival that celebrates Dutch culture with flowers, dances, and food.",
+            "image": "expoflora.webp"
+        },
+        {
+            "name": "Dutch Village",
+            "address": "Rua da Holanda, 200",
+            "description": "Charming area with Dutch-style buildings housing shops, restaurants, and museums.",
+            "image": "village.webp"
+        },
+        {
+            "name": "Flower Auction",
+            "address": "Rodovia SP-107, Km 35",
+            "description": "One of Brazil's largest flower auctions where you can see the flower trade in action.",
+            "image": "cooperflora.webp"
+        },
+        {
+            "name": "St. Nicholas Church",
+            "address": "Praça da Liberdade, 10",
+            "description": "Beautiful church with Dutch architectural influences in the heart of Holambra.",
+            "image": "church.webp"
+        },
+        {
+            "name": "Holambra Cheese Factory",
+            "address": "Estrada Municipal, 120",
+            "description": "Learn about Dutch-style cheese production and sample delicious local cheeses.",
+            "image": "queijariadevol.webp"
+        },
+        {
+            "name": "Bike Trail Network",
+            "address": "Various locations throughout the city",
+            "description": "Over 20km of scenic bike trails connecting parks, farms, and attractions.",
+            "image": "biketrail.webp"
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Holambra - Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/discovery.css">
+    <script src="scripts/discovery.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logoholambra.png" alt="Holambra Chamber Logo" class="logo">
+            <h1>Chamber of Commerce of Holambra</h1>
+            <button id="menu-toggle">☰</button>
+        </div>
+        <nav>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discovery.html" class="active">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discover-main">
+        <aside class="sidebar">
+            <div class="visit-message" id="visit-message">
+                <!-- Message will be inserted by JavaScript -->
+            </div>
+            <div class="demographics">
+                <h2>About Holambra</h2>
+                <p>Holambra is known as the "Flower City" of Brazil, famous for its Dutch heritage and flower production.</p>
+                <p>Population: Approximately 15,000</p>
+                <p>Founded: 1948</p>
+            </div>
+        </aside>
+
+        <section class="gallery" id="gallery">
+    <h2 class="visually-hidden">Galeria de Atrações</h2>
+    <!-- Cards will be inserted by JavaScript from JSON data -->
+</section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <img src="images/Flowerslogo.jpg" alt="Holambra Chamber Logo" class="footer-logo">
+                <address>
+                    Chamber of Commerce of Holambra<br>
+                    Rua das Flores, 123<br>
+                    Holambra, SP 13825-000
+                </address>
+                <p>info@holambrachamber.com</p>
+                <p>+55 (19) 3802-8000</p>
+            </div>
+            <div class="additional-links">
+                <p>&copy; <span id="current-year"></span> Chamber of Commerce of Holambra</p>
+                <p>Arthur M.Rocha</p>
+                <p>WDD 230 Project</p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
