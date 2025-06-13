@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a equipe do Receitas Rápidas. Tire dúvidas, envie sugestões ou reporte problemas.">
+    <meta name="author" content="Receitas Rápidas">
+    <title>Receitas Fáceis e Rápidas - Contato</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span>🍳</span>
+                <h1>Receitas Rápidas</h1>
+            </a>
+            
+            <button class="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="receitas.html">Receitas</a></li>
+                    <li><a href="dicas.html">Dicas</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <p>Estamos sempre abertos para ouvir sugestões, dúvidas ou feedbacks.</p>
+                        
+                        <ul class="contact-details">
+                            <li>📧 contato@receitasrapidas.com</li>
+                            <li>📱 (11) 99999-9999</li>
+                            <li>📍 São Paulo, SP - Brasil</li>
+                        </ul>
+                        
+                        <div class="contact-social">
+                            <h4>Siga-nos nas Redes Sociais</h4>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Facebook">📘</a>
+                                <a href="#" aria-label="Instagram">📸</a>
+                                <a href="#" aria-label="Pinterest">📌</a>
+                                <a href="#" aria-label="YouTube">▶️</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form action="form-data.html" method="GET">
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Assunto</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="duvida">Dúvida</option>
+                                    <option value="sugestao">Sugestão</option>
+                                    <option value="reclamacao">Reclamação</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Sobre Nós</h3>
+                    <p>Receitas Rápidas é seu destino para descobrir receitas fáceis, práticas e deliciosas para todas as ocasiões.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="receitas.html">Receitas</a></li>
+                        <li><a href="dicas.html">Dicas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Siga-nos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                        <a href="#" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Receitas Rápidas. Todos os direitos reservados.</p>
+                <p><a href="attributions.html">Atribuições</a></p>
+            </div>
+        </div>
+        <!-- recipe-modal.html -->
+<div id="recipe-modal" class="modal">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <div id="modal-recipe-details"></div>
+  </div>
+</div>
+<!-- Adicione isto dentro do footer, antes do footer-bottom -->
+<div class="footer-video">
+    <a href="https://www.loom.com/share/ec67205236684004967e2eee5871865a?sid=7c4072d5-ffc2-4fc9-81a1-113dfa59a5f2" target="_blank" class="video-link">
+        ▶️ Assistir Demonstração do Projeto
+    </a>
+</div>
+</footer>
+<script type="module" src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Receitas fáceis e rápidas para o dia a dia. Aprenda a cozinhar pratos deliciosos em pouco tempo!">
+    <meta name="author" content="Receitas Rápidas">
+    <meta property="og:title" content="Receitas Fáceis e Rápidas">
+    <meta property="og:description" content="Descubra receitas simples e práticas para todas as refeições">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://exemplo.com/images/og-image.jpg">
+    <meta property="og:url" content="https://exemplo.com">
+    <title>Receitas Fáceis e Rápidas - Página Inicial</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span>🍳</span>
+                <h1>Receitas Rápidas</h1>
+            </a>
+            
+            <button class="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="receitas.html">Receitas</a></li>
+                    <li><a href="dicas.html">Dicas</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Receitas Fáceis para o Dia a Dia</h2>
+                    <p>Descubra centenas de receitas simples, rápidas e deliciosas para todas as ocasiões. De café da manhã a sobremesas, temos tudo o que você precisa!</p>
+                    <div class="cta-buttons">
+                        <a href="receitas.html" class="btn">Ver Receitas</a>
+                        <a href="dicas.html" class="btn secondary">Dicas Culinárias</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                <img src="images/receitas.jpg" alt="Recipesbook" loading="lazy" style="width:100%;  width: 890px; border-radius:8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2>Categorias Populares</h2>
+                <div class="category-grid">
+                    <a href="receitas.html?categoria=cafe-da-manha" class="category-card">
+                        <div class="category-icon">☕</div>
+                        <h3>Café da Manhã</h3>
+                        <p>Comece o dia com energia</p>
+                    </a>
+                    <a href="receitas.html?categoria=almoco" class="category-card">
+                        <div class="category-icon">🍲</div>
+                        <h3>Almoço</h3>
+                        <p>Refeições completas e práticas</p>
+                    </a>
+                    <a href="receitas.html?categoria=jantar" class="category-card">
+                        <div class="category-icon">🍽️</div>
+                        <h3>Jantar</h3>
+                        <p>Pratos rápidos para o fim do dia</p>
+                    </a>
+                    <a href="receitas.html?categoria=sobremesas" class="category-card">
+                        <div class="category-icon">🍰</div>
+                        <h3>Sobremesas</h3>
+                        <p>Doces fáceis para adoçar sua vida</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-recipes">
+            <div class="container">
+                <h2>Receitas em Destaque</h2>
+                <div class="recipe-grid" id="featured-recipes">
+                    <!-- As receitas serão carregadas via JavaScript -->
+                    <div class="loading">Carregando receitas...</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Receba Novas Receitas</h2>
+                    <p>Inscreva-se para receber receitas exclusivas e dicas culinárias diretamente no seu e-mail!</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Seu melhor e-mail" required>
+                        <button type="submit" class="btn">Inscrever-se</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Sobre Nós</h3>
+                    <p>Receitas Rápidas é seu destino para descobrir receitas fáceis, práticas e deliciosas para todas as ocasiões.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="receitas.html">Receitas</a></li>
+                        <li><a href="dicas.html">Dicas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Siga-nos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                        <a href="#" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Receitas Rápidas. Todos os direitos reservados.</p>
+                <p><a href="attributions.html">Atribuições</a></p>
+                
+            </div>
+        </div>
+        <!-- Adicione isto dentro do footer, antes do footer-bottom -->
+<div class="footer-video">
+    <a href="https://www.loom.com/share/ec67205236684004967e2eee5871865a?sid=7c4072d5-ffc2-4fc9-81a1-113dfa59a5f2" target="_blank" class="video-link">
+        ▶️ Assistir Demonstração do Projeto
+    </a>
+</div>
+    </footer>
+
+    <!-- Certifique-se que este HTML existe na página -->
+    <div id="recipe-modal" class="modal">
+      <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div id="modal-recipe-details"></div>
+        </div>
+    </div>
+     <script>
+// Bloqueia a injeção de estilos problemáticos da extensão
+document.addEventListener('DOMContentLoaded', () => {
+    // Observa adições de elementos ao DOM
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+                if (node.nodeName === 'LINK' && node.href && 
+                    node.href.includes('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb')) {
+                    node.remove();
+                }
+            });
+        });
+    });
+    
+    // Inicia a observação
+    observer.observe(document.head, {
+        childList: true,
+        subtree: true
+    });
+});
+</script>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

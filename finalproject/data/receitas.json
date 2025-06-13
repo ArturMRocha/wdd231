@@ -1,0 +1,353 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Omelete Simples",
+      "category": "Café da Manhã",
+      "prepTime": 15,
+      "servings": 1,
+      "calories": 250,
+      "image": "images/omeletesimples.webp",
+      "ingredients": [
+        {"name": "Ovos", "amount": "2 unidades"},
+        {"name": "Queijo ralado", "amount": "2 colheres"},
+        {"name": "Sal", "amount": "a gosto"},
+        {"name": "Pimenta", "amount": "a gosto"}
+      ],
+      "steps": [
+        "Bata os ovos em uma tigela",
+        "Adicione sal e pimenta a gosto",
+        "Aqueça uma frigideira antiaderente",
+        "Despeje os ovos batidos e espalhe uniformemente",
+        "Adicione o queijo ralado",
+        "Dobre ao meio quando estiver cozido"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Panquecas de Banana",
+      "category": "Café da Manhã",
+      "prepTime": 20,
+      "servings": 2,
+      "calories": 320,
+      "image": "images/panquecabanana.webp",
+      "ingredients": [
+        {"name": "Banana madura", "amount": "1 unidade"},
+        {"name": "Ovo", "amount": "1 unidade"},
+        {"name": "Farinha de aveia", "amount": "4 colheres"},
+        {"name": "Fermento em pó", "amount": "1/2 colher"},
+        {"name": "Canela em pó", "amount": "1 pitada"}
+      ],
+      "steps": [
+        "Amasse a banana em uma tigela",
+        "Adicione o ovo e misture bem",
+        "Incorpore a farinha de aveia, fermento e canela",
+        "Aqueça uma frigideira antiaderente",
+        "Despeje porções da massa e cozinhe por 2 minutos de cada lado",
+        "Sirva com mel ou frutas"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Vitamina de Frutas",
+      "category": "Café da Manhã",
+      "prepTime": 5,
+      "servings": 2,
+      "calories": 180,
+      "image": "images/vitaminafrutas.webp",
+      "ingredients": [
+        {"name": "Banana", "amount": "1 unidade"},
+        {"name": "Morango", "amount": "1/2 xícara"},
+        {"name": "Leite ou iogurte", "amount": "1 copo"},
+        {"name": "Mel", "amount": "1 colher"}
+      ],
+      "steps": [
+        "Descasque a banana e pique",
+        "Lave os morangos",
+        "Coloque todos os ingredientes no liquidificador",
+        "Bata até obter uma mistura homogênea",
+        "Sirva imediatamente"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Tapioca Recheada",
+      "category": "Café da Manhã",
+      "prepTime": 10,
+      "servings": 1,
+      "calories": 200,
+      "image": "images/tapioca.webp",
+      "ingredients": [
+        {"name": "Goma de tapioca", "amount": "4 colheres"},
+        {"name": "Queijo mussarela", "amount": "2 fatias"},
+        {"name": "Tomate picado", "amount": "2 colheres"},
+        {"name": "Orégano", "amount": "a gosto"}
+      ],
+      "steps": [
+        "Espalhe a goma em uma frigideira quente",
+        "Espere cerca de 1 minuto até firmar",
+        "Adicione o queijo e tomate",
+        "Dobre ao meio e deixe dourar",
+        "Polvilhe orégano e sirva"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Salada Caprese",
+      "category": "Almoço",
+      "prepTime": 10,
+      "servings": 2,
+      "calories": 180,
+      "image": "images/saladacalaprese.webp",
+      "ingredients": [
+        {"name": "Tomate", "amount": "2 unidades"},
+        {"name": "Mussarela de búfala", "amount": "200g"},
+        {"name": "Manjericão fresco", "amount": "1 ramo"},
+        {"name": "Azeite de oliva", "amount": "2 colheres"},
+        {"name": "Sal", "amount": "a gosto"}
+      ],
+      "steps": [
+        "Corte os tomates em rodelas",
+        "Corte a mussarela em rodelas",
+        "Monte as camadas alternando tomate e mussarela",
+        "Tempere com sal e azeite",
+        "Decore com folhas de manjericão"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Risoto de Frango",
+      "category": "Almoço",
+      "prepTime": 35,
+      "servings": 3,
+      "calories": 420,
+      "image": "images/risoto.webp",
+      "ingredients": [
+        {"name": "Arroz arbóreo", "amount": "1 xícara"},
+        {"name": "Peito de frango", "amount": "200g"},
+        {"name": "Cebola", "amount": "1/2 unidade"},
+        {"name": "Caldo de galinha", "amount": "2 xícaras"},
+        {"name": "Queijo parmesão", "amount": "4 colheres"}
+      ],
+      "steps": [
+        "Cozinhe o frango e desfie",
+        "Refogue a cebola picada",
+        "Adicione o arroz e mexa até dourar",
+        "Acrescente o caldo quente aos poucos",
+        "Quando o arroz estiver al dente, adicione o frango",
+        "Finalize com queijo parmesão"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Wrap de Vegetais",
+      "category": "Almoço",
+      "prepTime": 15,
+      "servings": 2,
+      "calories": 280,
+      "image": "images/wrapvegetais.webp",
+      "ingredients": [
+        {"name": "Tortilha integral", "amount": "2 unidades"},
+        {"name": "Peito de frango grelhado", "amount": "150g"},
+        {"name": "Alface", "amount": "4 folhas"},
+        {"name": "Tomate", "amount": "1 unidade"},
+        {"name": "Cream cheese", "amount": "2 colheres"}
+      ],
+      "steps": [
+        "Espalhe o cream cheese na tortilha",
+        "Adicione as folhas de alface",
+        "Coloque o frango desfiado",
+        "Acrescente tomate picado",
+        "Enrole firmemente e corte ao meio"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Quinoa com Legumes",
+      "category": "Almoço",
+      "prepTime": 25,
+      "servings": 3,
+      "calories": 350,
+      "image": "images/quinoa.webp",
+      "ingredients": [
+        {"name": "Quinoa", "amount": "1 xícara"},
+        {"name": "Abobrinha", "amount": "1 unidade"},
+        {"name": "Cenoura", "amount": "1 unidade"},
+        {"name": "Ervilhas", "amount": "1/2 xícara"},
+        {"name": "Azeite", "amount": "2 colheres"}
+      ],
+      "steps": [
+        "Cozinhe a quinoa conforme instruções da embalagem",
+        "Corte a abobrinha e cenoura em cubos",
+        "Refogue os legumes no azeite",
+        "Misture com a quinoa cozida",
+        "Acrescente as ervilhas",
+        "Tempere com sal e pimenta"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Macarrão Alho e Óleo",
+      "category": "Jantar",
+      "prepTime": 20,
+      "servings": 2,
+      "calories": 450,
+      "image": "images/macarraoalho.webp",
+      "ingredients": [
+        {"name": "Macarrão espaguete", "amount": "200g"},
+        {"name": "Alho", "amount": "6 dentes"},
+        {"name": "Azeite de oliva", "amount": "4 colheres"},
+        {"name": "Pimenta calabresa", "amount": "1 colher"},
+        {"name": "Salsinha", "amount": "a gosto"},
+        {"name": "Sal", "amount": "a gosto"}
+      ],
+      "steps": [
+        "Cozinhe o macarrão conforme as instruções da embalagem",
+        "Pique o alho finamente",
+        "Aqueça o azeite em uma frigideira",
+        "Doure o alho no azeite",
+        "Adicione a pimenta calabresa",
+        "Misture o macarrão cozido",
+        "Tempere com sal e salsinha"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Filé de Peixe Grelhado",
+      "category": "Jantar",
+      "prepTime": 25,
+      "servings": 2,
+      "calories": 280,
+      "image": "images/filepeixe.webp",
+      "ingredients": [
+        {"name": "Filé de pescada", "amount": "2 unidades"},
+        {"name": "Limão", "amount": "1 unidade"},
+        {"name": "Alho", "amount": "2 dentes"},
+        {"name": "Azeite", "amount": "2 colheres"},
+        {"name": "Ervas finas", "amount": "1 colher"}
+      ],
+      "steps": [
+        "Tempere os filés com suco de limão, alho picado e ervas",
+        "Deixe marinar por 15 minutos",
+        "Aqueça uma frigideira ou grelha",
+        "Grelhe os filés por 4 minutos de cada lado",
+        "Regue com azeite antes de servir"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Frango Xadrez",
+      "category": "Jantar",
+      "prepTime": 30,
+      "servings": 3,
+      "calories": 380,
+      "image": "images/frangoxadrez.webp",
+      "ingredients": [
+        {"name": "Peito de frango", "amount": "300g"},
+        {"name": "Pimentão vermelho", "amount": "1 unidade"},
+        {"name": "Pimentão amarelo", "amount": "1 unidade"},
+        {"name": "Cebola", "amount": "1 unidade"},
+        {"name": "Molho shoyu", "amount": "3 colheres"}
+      ],
+      "steps": [
+        "Corte o frango em cubos",
+        "Corte os pimentões e cebola em pedaços",
+        "Refogue o frango até dourar",
+        "Adicione os vegetais e refogue rapidamente",
+        "Acrescente o shoyu e mexa bem",
+        "Cozinhe por mais 5 minutos"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Omelete de Vegetais",
+      "category": "Jantar",
+      "prepTime": 20,
+      "servings": 2,
+      "calories": 220,
+      "image": "images/omeletevegetais.webp",
+      "ingredients": [
+        {"name": "Ovos", "amount": "4 unidades"},
+        {"name": "Tomate", "amount": "1 unidade"},
+        {"name": "Cebola", "amount": "1/2 unidade"},
+        {"name": "Espinafre", "amount": "1 xícara"},
+        {"name": "Queijo minas", "amount": "4 fatias"}
+      ],
+      "steps": [
+        "Bata os ovos em uma tigela",
+        "Pique os vegetais em cubos pequenos",
+        "Misture os vegetais aos ovos batidos",
+        "Aqueça uma frigideira antiaderente",
+        "Despeje a mistura e cozinhe em fogo médio",
+        "Coloque o queijo e dobre a omelete"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Pudim de Leite",
+      "category": "Sobremesas",
+      "prepTime": 60,
+      "servings": 8,
+      "calories": 320,
+      "image": "images/pudim.webp",
+      "ingredients": [
+        {"name": "Leite condensado", "amount": "1 lata"},
+        {"name": "Leite", "amount": "1 medida (lata)"},
+        {"name": "Ovos", "amount": "3 unidades"},
+        {"name": "Açúcar", "amount": "1 xícara"}
+      ],
+      "steps": [
+        "Derreta o açúcar em uma forma de pudim",
+        "Bata no liquidificador os ovos, leite condensado e leite",
+        "Despeje na forma caramelizada",
+        "Asse em banho-maria por 50 minutos",
+        "Deixe esfriar e desenforme"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Mousse de Chocolate",
+      "category": "Sobremesas",
+      "prepTime": 15,
+      "servings": 4,
+      "calories": 280,
+      "image": "images/mousse.webp",
+      "ingredients": [
+        {"name": "Chocolate meio amargo", "amount": "200g"},
+        {"name": "Creme de leite", "amount": "1 lata"},
+        {"name": "Açúcar", "amount": "2 colheres"},
+        {"name": "Claras em neve", "amount": "3 unidades"}
+      ],
+      "steps": [
+        "Derreta o chocolate em banho-maria",
+        "Misture o creme de leite e açúcar ao chocolate derretido",
+        "Espere esfriar e incorpore as claras em neve",
+        "Distribua em taças e leve à geladeira por 2 horas",
+        "Decore com raspas de chocolate"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Frutas com Mel e Granola",
+      "category": "Sobremesas",
+      "prepTime": 10,
+      "servings": 2,
+      "calories": 180,
+      "image": "images/saladafrutas.webp",
+      "ingredients": [
+        {"name": "Morango", "amount": "1 xícara"},
+        {"name": "Kiwi", "amount": "1 unidade"},
+        {"name": "Banana", "amount": "1 unidade"},
+        {"name": "Granola", "amount": "4 colheres"},
+        {"name": "Mel", "amount": "2 colheres"}
+      ],
+      "steps": [
+        "Lave e corte as frutas em pedaços",
+        "Misture todas as frutas em uma tigela",
+        "Polvilhe a granola por cima",
+        "Regue com mel",
+        "Sirva imediatamente"
+      ]
+    }
+  ]
+}

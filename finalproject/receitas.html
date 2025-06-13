@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra receitas fáceis e rápidas para todas as refeições. Café da manhã, almoço, jantar e sobremesas.">
+    <meta name="author" content="Receitas Rápidas">
+    <title>Receitas Fáceis e Rápidas - Receitas</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="">
+    <script type="module" src="scripts/filter.js"></script>
+    <script type="module" src="scripts/modal.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span>🍳</span>
+                <h1>Receitas Rápidas</h1>
+            </a>
+            
+            <button class="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="receitas.html" class="active">Receitas</a></li>
+                    <li><a href="dicas.html">Dicas</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="recipes">
+            <div class="container">
+                <h2>Todas as Receitas</h2>
+                <div class="filters">
+                    <button class="btn filter-btn active" data-category="all">Todas</button>
+                    <button class="btn filter-btn" data-category="cafe-da-manha">Café da Manhã</button>
+                    <button class="btn filter-btn" data-category="almoco">Almoço</button>
+                    <button class="btn filter-btn" data-category="jantar">Jantar</button>
+                    <button class="btn filter-btn" data-category="sobremesas">Sobremesas</button>
+                </div>
+                <div class="recipe-grid" id="all-recipes">
+                    <!-- As receitas serão carregadas via JavaScript -->
+                    <div class="loading">Carregando receitas...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Sobre Nós</h3>
+                    <p>Receitas Rápidas é seu destino para descobrir receitas fáceis, práticas e deliciosas para todas as ocasiões.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="receitas.html">Receitas</a></li>
+                        <li><a href="dicas.html">Dicas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Siga-nos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                        <a href="#" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Receitas Rápidas. Todos os direitos reservados.</p>
+                <p><a href="attributions.html">Atribuições</a></p>
+            </div>
+        </div>
+        <!-- Adicione isto dentro do footer, antes do footer-bottom -->
+<div class="footer-video">
+    <a href="https://www.loom.com/share/ec67205236684004967e2eee5871865a?sid=7c4072d5-ffc2-4fc9-81a1-113dfa59a5f2" target="_blank" class="video-link">
+        ▶️ Assistir Demonstração do Projeto
+    </a>
+</div>
+    </footer>
+
+    <!-- Modal para detalhes da receita -->
+    <div class="modal" id="recipe-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body" id="modal-recipe-details">
+                <!-- Conteúdo será preenchido via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module">
+    // Script específico para a página de receitas
+    import { fetchRecipes, displayRecipes } from './scripts/recipes.js';
+    import { setupFiltering } from './scripts/filter.js';
+    import { setupModal, preloadRecipes } from './scripts/modal.js';
+        
+    //Try / Catch
+    
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            // Pré-carregar receitas para o modal
+            await preloadRecipes();
+            
+            // Carregar e exibir receitas
+            const recipes = await fetchRecipes();
+            displayRecipes(recipes, '#all-recipes');
+            
+            // Configurar sistema de filtragem
+            setupFiltering(recipes);
+            
+            // Configurar modal
+            setupModal();
+        } catch (error) {
+            console.error('Erro ao carregar receitas:', error);
+            const container = document.querySelector('#all-recipes');
+            container.innerHTML = '<p class="error">Não foi possível carregar as receitas. Tente novamente mais tarde.</p>';
+        }
+    });
+</script>
+</body>
+</html>
